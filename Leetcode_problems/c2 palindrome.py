@@ -10,9 +10,24 @@
 # sol=Solution()
 # print(sol.isPalindrome(101))
 
+
+
+
+## Optimal Code: 
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        if x<0:
-            return False
-        else:
+        num=x
+        result=0
+        while (num>0):
+            digit=num%10
+            result=(result*10)+digit
+            num=num//10
+        return x==result
+
+sol=Solution()
+print(sol.isPalindrome(-101))
+
+# Time Complexity-> O(log base 10 (n))
+# Space Complexity-> O(1)
             
